@@ -136,7 +136,7 @@ public class DogManager : MonoBehaviour
     // Allow player input to change lanes
     private void SwitchLanes()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             if (lanePos <= 2)
             {
@@ -144,7 +144,7 @@ public class DogManager : MonoBehaviour
                 lanePos++;
             }
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (lanePos >= 2)
             {
